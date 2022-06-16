@@ -1,0 +1,50 @@
+<!--
+File: index.html
+GUI Assignment: Creating My First WebPage
+Dan Nguyen, UMASS Lowell Computer Science, dan_nguyen@student.uml.edu
+created on 5/19/2022, finished on 6/15/2022
+Copyright (c) 2022 by Dan Nguyen 
+This is a website that uses javascript to create a table where a user can enter
+4 numbers(between -50 and 50) (2 ranges) and create a multiplication table
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <link rel="stylesheet" href="css\styling.css">
+        <link rel="icon" href="https://www.uml.edu/resources/university-relations/logos/vertical/vertical_logo_B&W.png">
+    </head>
+    <body>
+<!-- I used this to make the main interface where the user inputs numbers and where to error 
+     messages will appear
+-->        
+        <div class = "main">
+            <h2>Multiplication Table</h2>
+            <p>Please enter 4 numbers(between -50 and 50) down below, and then press "Submit" to create a Multiplication table. </p>
+            Vertical Column<br>
+            Minimum Value: <input type = "text" id= "input1" name = "number1" placeholder= "Number 1" size ="15" value ="">  
+            Max Value:  <input type = "text" id= "input2" name = "number2" placeholder= "Number 2" size ="15" value ="" ><br><br>
+            Horizontal Row<br>
+            Minimum Value: <input type = "text" id= "input3" name = "number1" placeholder= "Number 3" size ="15" value ="">  
+            Max Value:  <input type = "text" id= "input4" name = "number2" placeholder= "Number 4" size ="15" value ="" ><br><br>
+            <input type = "button" onclick = "buttonpressed()" value = "Submit">
+
+<!-- I wanted to add a reset button to erase the 4 inputs but I couldnt due to time constraints  --> 
+
+            <div id = 'emessage'></div>
+        </div>
+
+<!-- This makes the container i used to make the table scrollable -->
+        <div class = "container">
+            <div id = "table"></div>
+        </div>
+  
+<!-- This creates the footer with the message I wanted, I styled in css  -->        
+        <footer>
+            Copyright 2022 Dan Nguyen
+        </footer>
+        <script src ="./javascript/myScript.js"></script>           
+    </body>
+</html>
